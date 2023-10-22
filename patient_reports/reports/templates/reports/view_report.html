@@ -1,0 +1,11 @@
+<!-- reports/templates/reports/view_report.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>View Patient Report</h2>
+  <p><strong>Patient Name:</strong> {{ report.patient_name }}</p>
+  <p><strong>Uploaded At:</strong> {{ report.uploaded_at }}</p>
+  <p><strong>Report:</strong> <a href="{{ report.report.url }}" target="_blank">View Report</a></p>
+  <a href="{% url 'report_list' %}">Back to Report List</a>
+{% endblock %}

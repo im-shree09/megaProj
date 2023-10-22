@@ -1,0 +1,13 @@
+<!-- reports/templates/reports/report_list.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Report List</h2>
+  <ul>
+    {% for report in reports %}
+      <li><a href="{% url 'view_report' report.pk %}">{{ report.patient_name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'upload_report' %}">Upload a Report</a>
+{% endblock %}

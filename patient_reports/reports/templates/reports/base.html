@@ -1,0 +1,24 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Site Title</title>
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body>
+    <header>
+        <h1>Your Site Header</h1>
+        <!-- Add your site's navigation menu here -->
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; {{ year }} Your Site Footer</p>
+    </footer>
+</body>
+</html>
