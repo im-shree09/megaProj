@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .light {
-  --mainColor: #64bcf4;
-  --hoverColor: #5bacdf;
+  --mainColor: #DE3163;
+  --hoverColor: #990F4B;
   --backgroundColor: #f1f8fc;
   --darkOne: #312f3a;
   --darkTwo: #45424b;
@@ -11,8 +11,8 @@
 }
 
 .dark {
-  --mainColor: #64bcf4;
-  --hoverColor: #5bacdf;
+  --mainColor: #DE3163;
+  --hoverColor: #990F4B;
   --backgroundColor: #192e3a;
   --darkOne: #f3f3f3;
   --darkTwo: #fff;
