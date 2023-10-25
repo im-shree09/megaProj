@@ -34,7 +34,7 @@ def view_report(request, pk):
 @login_required(login_url='login')
 
 def mk(request):
-    return render(request, 'mk.html')
+    return render(request, 'upload2.html')
 
 
 def loginn(request):

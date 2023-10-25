@@ -1,0 +1,11 @@
+/* Add your custom CSS styles here */
+button {
+    margin-top: 10px; /* Adjust as needed */
+    background-color: #007bff; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    padding: 15px 20px; /* Adjust padding as needed */
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}

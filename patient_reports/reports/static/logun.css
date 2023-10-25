@@ -11,6 +11,7 @@ background-color: #080710;
 }
 .background{
 width: 430px;
+outline:#f15a85;
 height: 520px;
 position: absolute;
 transform: translate(-50%,-50%);

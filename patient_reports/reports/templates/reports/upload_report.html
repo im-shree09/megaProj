@@ -1,13 +1,43 @@
 <!-- reports/templates/reports/upload_report.html -->
+{% load static %}
 
-{% extends "base.html" %}
 
-{% block content %}
-  <h2>Upload Patient Report</h2>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Upload</button>
-  </form>
-  <a href="{% url 'report_list' %}">Back to Report List</a>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Site Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'upload2.css' %}">
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body>
+    <header>
+        <h1>Patient Details</h1>
+        <!-- Add your site's navigation menu here -->
+    </header>
+    
+    <main class="login-box">
+      <h2>Upload Patient Report</h2>
+      <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %}
+        
+          {{ form.as_p }}
+       
+      
+        <button  type="submit">Upload</button>
+        {% comment %} <a href="">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a> {% endcomment %}
+      </form>
+      <a href="{% url 'report_list' %}">Back to Report List</a>
+    </main>
+    
+    <footer>
+        <p>&copy; {{ year }} </p>
+    </footer>
+</body>
+</html>

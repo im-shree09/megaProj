@@ -104,7 +104,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #fff;
+    background-color:#f15a85;;
 }
 .background{
     width: 430px;
@@ -140,11 +140,12 @@ body{
 form{
     height: 520px;
     width: 400px;
-    background-color: #e1587f;
+    background-color:#fff;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
+    {% comment %} color: #080710; {% endcomment %}
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
@@ -153,10 +154,10 @@ form{
 }
 form *{
     font-family: 'Poppins',sans-serif;
-    color: #ffffff;
+    color: #000000;
     letter-spacing: 0.5px;
-    outline: none;
-    border: none;
+    outline: #000000;
+    {% comment %} border: solid #C0C0C0; {% endcomment %}
 }
 form h3{
     font-size: 32px;
@@ -170,31 +171,45 @@ label{
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
+
 }
 input{
     display: block;
     height: 50px;
     width: 100%;
     background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
+    {% comment %} background-color: #C0C0C0; {% endcomment %}
+    border-radius: 3px ;
     padding: 0 10px;
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
 }
 ::placeholder{
-    color: #e5e5e5;
+    color: 	#000000;
 }
-button{
+{% comment %} button{
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
-    color: #080710;
+    color: #C0C0C0;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+} {% endcomment %}
+button {
+   margin-top: 50px;
+   width: 100%;
+   background-color: #ffffff;
+   color: #000000;
+   padding: 15px 0;
+   font-size: 18px;
+   font-weight: 600;
+   border-radius: 5px;
+   cursor: pointer;
+   border: 2px solid #000000; /* Change 'yourBorderColor' to the color you want */
 }
 .social{
   margin-top: 30px;
