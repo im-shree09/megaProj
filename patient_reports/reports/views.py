@@ -13,6 +13,7 @@ def home(request):
 
 def report_list(request):
     reports = PatientReport.objects.all()
+    print(reports)
     return render(request, 'reports/report_list.html', {'reports': reports})
 
 def upload_report(request):
@@ -30,11 +31,21 @@ def view_report(request, pk):
     return render(request, 'view_report.html', {'report': report})
 
 
+def lp(request, pk):
+    report = PatientReport.objects.get(pk=pk)
+    return render(request, 'profile.html', {'report': report})
+
 # Create your views here.
-@login_required(login_url='login')
+@login_required(login_url='loginn')
+
+# def mk(request):
+#     # report = PatientReport.objects.get()
+#     return render(request, 'list.html')
 
 def mk(request):
-    return render(request, 'upload2.html')
+    reports = PatientReport.objects.all()
+    # print(reports)
+    return render(request, 'reports/list.html', {'reports': reports})
 
 
 def loginn(request):

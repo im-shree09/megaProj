@@ -12,5 +12,6 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('upload', views.upload_report, name='upload_report'),
     path('view/<int:pk>/', views.view_report, name='view_report'),
+    path('lp/<int:pk>/', views.lp, name='lp'),
     path('mk', views.mk, name='mk'),
 ]

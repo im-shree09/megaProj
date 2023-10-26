@@ -1,13 +1,34 @@
 <!-- reports/templates/reports/report_list.html -->
 
-{% extends "base.html" %}
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Site Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}">
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body >
+    <header  >
+        <h1>Your Site Header</h1>
+        <!-- Add your site's navigation menu here -->
+    </header>
+    
+    <main >
+      <h2>Report List</h2>
+      <ul>
+        {% for report in reports %}
+          <li><a href="{% url 'lp' lp.pk %}">{{ report.patient_name }}{{report.sex}}</a></li>
+        {% endfor %}
+      </ul>
+      <a href="{% url 'upload_report' %}">Upload a Report</a>
+    </main>
+    
+    <footer>
+        <p>&copy; {{ year }} Your Site Footer</p>
+    </footer>
+</body>
+</html>
 
-{% block content %}
-  <h2>Report List</h2>
-  <ul>
-    {% for report in reports %}
-      <li><a href="{% url 'view_report' report.pk %}">{{ report.patient_name }}</a></li>
-    {% endfor %}
-  </ul>
-  <a href="{% url 'upload_report' %}">Upload a Report</a>
-{% endblock %}
