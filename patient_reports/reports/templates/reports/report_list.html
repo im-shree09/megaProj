@@ -1,4 +1,4 @@
-<!-- reports/templates/reports/report_list.html -->
+{% comment %} <!-- reports/templates/reports/report_list.html -->
 
 <!-- templates/base.html -->
 {% load static %}
@@ -20,7 +20,7 @@
       <h2>Report List</h2>
       <ul>
         {% for report in reports %}
-          <li><a href="{% url 'lp' lp.pk %}">{{ report.patient_name }}{{report.sex}}</a></li>
+          <li><a href="{% url 'view_report' report.pk %}">{{ report.patient_name }}</a></li>
         {% endfor %}
       </ul>
       <a href="{% url 'upload_report' %}">Upload a Report</a>
@@ -31,4 +31,77 @@
     </footer>
 </body>
 </html>
+ {% endcomment %}
 
+
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en" title="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive HTML Table With Pure CSS - Web Design/UI Design</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}">
+</head>
+
+<body>
+    <main class="table">
+        <section class="table__header">
+            <h1>Patient List</h1>
+            
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                {% comment %} <img src="" alt=""> {% endcomment %}
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    {% comment %} <label>Export As &nbsp; &#10140;</label> {% endcomment %}
+                    {% comment %} <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label> {% endcomment %}
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        {% comment %} <th> Id <span class="icon-arrow">&UpArrow;</span></th> {% endcomment %}
+                        <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                        {% comment %} <th> Age <span class="icon-arrow">&UpArrow;</span></th> {% endcomment %}
+                        {% comment %} <th> Sex <span class="icon-arrow">&UpArrow;</span></th> {% endcomment %}
+                        <th> Mobile Number<span class="icon-arrow">&UpArrow;</span></th>
+                        {% comment %} <th> Reports <span class="icon-arrow">&UpArrow;</span></th> {% endcomment %}
+                        <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for report in reports %}
+                    <tr>
+                        {% comment %} <td>{{report}}</td> {% endcomment %}
+                        <td><a href="{% url 'view_report' report.pk %}">{{ report.patient_name }}</a></td>
+                        {% comment %} <td>{{ report.age }}</td> {% endcomment %}
+                        {% comment %} <td>{{ report.sex }}</td> {% endcomment %}
+                        <td>{{ report.mobile_number }}</td>
+                        <td> {{ report.uploaded_at }} </td>
+
+                    </tr>
+                    {% endfor %} 
+                    {% comment %} <ul>
+                        {% for report in reports %}
+                          <li><a href="{% url 'view_report' report.pk %}">{{ report.patient_name }}</a></li>
+                        {% endfor %}
+                      </ul> {% endcomment %}
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+</body>
+
+</html>

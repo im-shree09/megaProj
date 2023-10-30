@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .light {
-  --mainColor: #DE3163;
-  --hoverColor: #990F4B;
+  --mainColor:  #00C0A3;
+  --hoverColor: #036557;
   --backgroundColor:#fff;
   --darkOne: #312f3a;
   --darkTwo: #45424b;
@@ -11,8 +11,8 @@
 }
 
 .dark {
-  --mainColor: #DE3163;
-  --hoverColor: #990F4B;
+  --mainColor:  #00C0A3;
+  --hoverColor:  #036557;
   --backgroundColor: #fff;
   --darkOne: #f3f3f3;
   --darkTwo: #fff;
@@ -61,10 +61,12 @@ a {
   position: relative;
   max-width: 81rem;
   width: 100%;
+  color: #00C0A3;
   margin: 0 auto;
   padding: 0 3rem;
   z-index: 10;
 }
+
 
 header {
   position: relative;

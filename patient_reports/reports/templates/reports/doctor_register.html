@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login</title>
+    <style>
+        body {
+            background-color: #00C0A3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #00C0A3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #009780;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Login</h1>
+        <form action="" method="post">
+            {% csrf_token %} 
+            <h3>Signup Here</h3>
+    
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" name="username" id="username">
+    
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email or Phone" name="email" id="email">
+    
+            <label for="password1">Password</label>
+            <input type="password" placeholder="Password" id="password1" name="password1">
+    
+    
+            <label for="password2">Confrom Password</label>
+            <input type="password" placeholder="Confrom Password" id="password2" name="password2">
+            <button type="submit">Signup</button>
+            
+            <a href="{% url 'doctor_login' %}" >i have already account</a>
+        </form>
+    </div>
+</body>
+</html>

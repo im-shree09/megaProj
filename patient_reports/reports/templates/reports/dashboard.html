@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #00c0a3, #009780);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #fff;
+        }
+        .options {
+            display: flex;
+            {% comment %} flex-direction: column; {% endcomment %}
+            align-items: center;
+            margin-top: 20px;
+        }
+        .option {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #00C0A3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    <div class="options">
+        <div class="option">
+            <a href="{% url 'doctor_login' %}">Doctor Login</a>
+        </div>
+        <div class="option">
+            <a href="{% url 'mk' %}">Lab Assistant Login</a>
+        </div>
+        {% comment %} <div class="option">
+            <a href="{% url 'doctor_register' %}">Register Doctor</a>
+        </div> {% endcomment %}
+        {% comment %} <div class="option">
+            <a href="{% url 'upload_report' %}">Upload Patient Reports</a>
+        </div> {% endcomment %}
+    </div>
+</body>
+</html>
